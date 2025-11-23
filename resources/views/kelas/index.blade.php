@@ -51,7 +51,7 @@
                 </tbody>
             </table>
             <div class="mt-4">
-                {{ $pendaftaran->links() }}
+                {{ $kelas->links() }}
             </div>
         </div>
     @endif
