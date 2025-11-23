@@ -15,7 +15,7 @@ class PendaftaranController extends Controller
      */
     public function index()
     {
-        $pendaftaran = Pendaftaran::with(['peserta', 'kelas'])->get();
+        $pendaftaran = Pendaftaran::with(['peserta', 'kelas'])->latest()->paginate(10);
 
         return view('pendaftaran.index', compact('pendaftaran'));
     }
