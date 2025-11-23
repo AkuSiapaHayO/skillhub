@@ -13,7 +13,6 @@ class KelasTest extends TestCase
     /** @test */
     public function dapat_menambah_kelas_baru()
     {
-        // Soal: Menambah kelas baru
         $data = [
             'nama_kelas' => 'Kelas Laravel Testing',
             'instruktur' => 'Pak Budi',
@@ -29,7 +28,6 @@ class KelasTest extends TestCase
     /** @test */
     public function dapat_menampilkan_daftar_seluruh_kelas()
     {
-        // Soal: Menampilkan daftar seluruh kelas
         Kelas::factory(3)->create();
 
         $response = $this->get(route('kelas.index'));
@@ -41,7 +39,6 @@ class KelasTest extends TestCase
     /** @test */
     public function dapat_menampilkan_detail_satu_kelas()
     {
-        // Soal: Menampilkan detail satu kelas
         $kelas = Kelas::factory()->create();
 
         $response = $this->get(route('kelas.show', $kelas->id));
@@ -54,7 +51,6 @@ class KelasTest extends TestCase
     /** @test */
     public function dapat_mengubah_data_kelas()
     {
-        // Soal: Mengubah data kelas
         $kelas = Kelas::factory()->create();
 
         $updateData = [
@@ -72,7 +68,6 @@ class KelasTest extends TestCase
     /** @test */
     public function dapat_menghapus_kelas()
     {
-        // Soal: Menghapus kelas
         $kelas = Kelas::factory()->create();
 
         $response = $this->delete(route('kelas.destroy', $kelas->id));
