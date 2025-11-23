@@ -3,11 +3,14 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\Peserta;
 use App\Models\Pendaftaran;
 
 class Kelas extends Model
 {
+    use HasFactory;
+
     protected $table = "kelas";
 
     protected $fillable = ['nama_kelas', 'deskripsi', 'instruktur'];
